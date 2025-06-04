@@ -1,0 +1,140 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.container {
+    max-width: 800px;
+    margin: auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+h1, h2 {
+    text-align: center;
+    color: #333;
+}
+
+.question-block {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+}
+
+.question-block p {
+    margin-top: 0;
+    margin-bottom: 10px; /* Add some space below the question text */
+}
+
+.question-block select {
+    padding: 8px;
+    margin-top: 5px;
+    margin-right: 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    min-width: 100px;
+}
+
+.question-controls {
+    margin-top: 10px;
+    display: flex;
+    gap: 10px; /* Space between buttons */
+}
+
+.explain-btn, .tts-btn {
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.explain-btn {
+    background-color: #5cb85c; /* Green */
+}
+.explain-btn:hover {
+    background-color: #4cae4c;
+}
+
+.tts-btn {
+    background-color: #007bff; /* Blue */
+}
+.tts-btn:hover {
+    background-color: #0056b3;
+}
+.tts-btn:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.explanation {
+    background-color: #eef;
+    border: 1px solid #aac;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 4px;
+    font-size: 0.9em;
+    display: none; /* Initially hidden */
+}
+
+.explanation.correct {
+    border-left: 5px solid green;
+    background-color: #e6ffe6; /* Light green background for correct */
+}
+.explanation.incorrect {
+    border-left: 5px solid red;
+    background-color: #ffe6e6; /* Light red background for incorrect */
+}
+
+
+#submit-btn, #clear-progress-btn {
+    display: block;
+    width: 200px;
+    margin: 20px auto;
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#submit-btn:hover, #clear-progress-btn:hover {
+    background-color: #0056b3;
+}
+
+#results-area {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #e9ecef;
+    border-radius: 5px;
+}
+
+#progress-area {
+    margin-top: 30px;
+}
+
+#progress-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+#progress-list li {
+    background: #f0f0f0;
+    margin-bottom: 5px;
+    padding: 8px;
+    border-radius: 3px;
+}

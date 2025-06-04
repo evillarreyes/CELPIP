@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>English Pronunciation Practice</title>
+    <link rel="stylesheet" href="style.css"> <!-- Your existing stylesheet -->
+    <style>
+        /* Additional styles for this page */
+        .phrase-item {
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            display: flex;
+            flex-direction: column; /* Stack elements vertically */
+            gap: 10px;
+        }
+
+        .phrase-text-container {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+            line-height: 1.8; /* For better readability of highlighted words */
+        }
+
+        .phrase-text-container .word {
+            cursor: pointer; /* Default cursor, changes if incorrect */
+            padding: 2px 0; /* Add a little padding for clickability */
+            border-radius: 3px;
+        }
+
+        .phrase-text-container .correct {
+            color: #28a745; /* Green */
+            background-color: #e6ffe6;
+            padding: 2px 4px;
+        }
+
+        .phrase-text-container .incorrect {
+            color: #dc3545; /* Red */
+            background-color: #ffe6e6;
+            font-weight: bold;
+            padding: 2px 4px;
+            cursor: pointer; /* Make incorrect words clickable */
+            text-decoration: underline;
+            text-decoration-style: wavy;
+            text-decoration-color: #dc3545;
+        }
+        
+
+
+        .controls button {
+            padding: 8px 12px;
+            margin-right: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        .listen-btn {
+            background-color: #007bff; /* Blue */
+            color: white;
+        }
+        .listen-btn:hover {
+            background-color: #0056b3;
+        }
+
+        .record-btn {
+            background-color: #28a745; /* Green */
+            color: white;
+        }
+        .record-btn.recording {
+            background-color: #dc3545; /* Red when recording */
+        }
+        .record-btn:hover {
+            background-color: #1e7e34;
+        }
+        .record-btn.recording:hover {
+            background-color: #c82333;
+        }
+        .record-btn:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+
+        .status-message {
+            font-style: italic;
+            color: #6c757d; /* Muted color */
+            font-size: 0.9em;
+            min-height: 1.2em; /* Reserve space */
+        }
+
+        #permission-status {
+            text-align: center;
+            padding: 10px;
+            background-color: #fff3cd;
+            border: 1px solid #ffeeba;
+            color: #856404;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="index.html" style="display: block; margin-bottom: 20px;">← Back to Practice Hub</a>
+        <h1>Common English Phrases: Pronunciation Practice</h1>
+
+        <div id="permission-status" style="display: none;">
+            Microphone permission is required for pronunciation practice. Please allow access.
+        </div>
+
+        <div id="phrase-list">
+            <!-- Phrases will be injected here by JavaScript -->
+        </div>
+    </div>
+
+    <script src="pronunciation_phrases.js"></script> <!-- Contains the list of phrases -->
+    <script src="pronunciation_script.js"></script>   <!-- Logic for this page -->
+</body>
+</html>
