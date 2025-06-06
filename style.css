@@ -1,4 +1,9 @@
-/* === ESTILOS GENERALES Y DEL QUIZ (TU CÓDIGO) === */
+/* === Reset y Estilos Generales (tu código) === */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
@@ -7,7 +12,6 @@ body {
     background-color: #f4f4f4;
     color: #333;
 }
-
 .container {
     max-width: 800px;
     margin: auto;
@@ -16,134 +20,72 @@ body {
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
-
-h1, h2 {
-    text-align: center;
-    color: #333;
-    border-bottom: 2px solid #e0e0e0;
-    padding-bottom: 10px;
-    margin-bottom: 20px;
+.navigation-bar {
+    max-width: 800px;
+    margin: 0 auto 15px auto;
+    padding: 0 10px;
 }
-
-.question-block {
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
-    padding: 15px;
-    margin-bottom: 15px;
-    border-radius: 5px;
-}
-
-.question-block p {
-    margin-top: 0;
-    margin-bottom: 10px;
-}
-
-.question-block select {
-    padding: 8px;
-    margin-top: 5px;
-    margin-right: 10px;
-    border-radius: 4px;
-    border: 1px solid #ccc;
-    min-width: 100px;
-}
-
-.question-controls {
-    margin-top: 10px;
-    display: flex;
-    gap: 10px;
-}
-
-.explain-btn, .tts-btn {
-    color: white;
-    border: none;
-    padding: 8px 12px;
-    text-align: center;
+.nav-link {
     text-decoration: none;
-    display: inline-block;
-    font-size: 14px;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-.explain-btn {
-    background-color: #5cb85c; /* Green */
-}
-.explain-btn:hover {
-    background-color: #4cae4c;
-}
-
-.tts-btn {
-    background-color: #007bff; /* Blue */
-}
-.tts-btn:hover {
-    background-color: #0056b3;
-}
-.tts-btn:disabled {
-    background-color: #ccc;
-    cursor: not-allowed;
-}
-
-.explanation {
-    background-color: #eef;
-    border: 1px solid #aac;
-    padding: 10px;
-    margin-top: 10px;
-    border-radius: 4px;
-    font-size: 0.9em;
-    display: none; 
-}
-
-.explanation.correct {
-    border-left: 5px solid green;
-    background-color: #e6ffe6;
-}
-.explanation.incorrect {
-    border-left: 5px solid red;
-    background-color: #ffe6e6;
-}
-
-
-#submit-btn, #clear-progress-btn {
-    display: block;
-    width: 200px;
-    margin: 20px auto;
-    padding: 10px 15px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+    color: #0056b3;
+    font-weight: bold;
     font-size: 16px;
-}
-
-#submit-btn:hover, #clear-progress-btn:hover {
-    background-color: #0056b3;
-}
-
-#results-area {
-    margin-top: 20px;
-    padding: 15px;
-    background-color: #e9ecef;
+    padding: 8px 12px;
     border-radius: 5px;
+    transition: background-color 0.2s;
+}
+.nav-link:hover {
+    background-color: #e9ecef;
 }
 
-#progress-area {
-    margin-top: 30px;
+/* === ESTILOS PARA LA TABLA DE NAVEGACIÓN (NUEVO) === */
+.celpip-structure-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-size: 0.9em;
+}
+.celpip-structure-table th, .celpip-structure-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+    vertical-align: middle;
+}
+.celpip-structure-table th {
+    background-color: #e9ecef;
+    font-weight: bold;
+    color: #333;
+}
+.celpip-structure-table td a {
+    font-weight: bold;
+    color: #0056b3;
+    text-decoration: none;
+}
+.celpip-structure-table td a:hover {
+    text-decoration: underline;
+}
+.celpip-structure-table td:first-child {
+    background-color: #f8f9fa;
 }
 
-#progress-list {
-    list-style-type: none;
-    padding: 0;
+/* === ESTILOS PARA LAS SECCIONES DE RECURSOS (NUEVO) === */
+.section-divider {
+    border: none;
+    border-top: 2px solid #e0e0e0;
+    margin: 40px 0;
+}
+.resource-section {
+    padding-top: 20px;
+    margin-top: -20px; /* Compensa el padding para el anclaje */
+    scroll-margin-top: 20px; /* Asegura que el título no quede oculto al saltar */
+}
+.resource-section h2 {
+    text-align: left;
+    border-bottom: none;
+    color: #0056b3;
 }
 
-#progress-list li {
-    background: #f0f0f0;
-    margin-bottom: 5px;
-    padding: 8px;
-    border-radius: 3px;
-}
-
-/* === ESTILOS PARA EL ASISTENTE DE ESCRITURA (CÓDIGO AÑADIDO) === */
+/* === Estilos para los bloques de tareas (sin cambios mayores) === */
 .task-block {
     background-color: #fdfdfd;
     border: 1px solid #ddd;
@@ -162,81 +104,25 @@ h1, h2 {
     font-size: 16px;
     width: 100%;
     max-width: 400px;
+    margin-top: 5px;
 }
-#suggestions-container {
+
+/* El resto de tus estilos para las listas de sugerencias (phrase-en, speak-btn, etc.) van aquí sin cambios */
+#email-suggestions-container, #survey-suggestions-container {
     margin-top: 25px;
     padding-top: 20px;
     border-top: 1px dashed #ccc;
 }
-.suggestion-category {
-    margin-bottom: 25px;
-}
-.suggestion-category h3 {
-    color: #343a40;
-    margin-bottom: 15px;
-    font-size: 1.1em;
-    text-align: left; /* Override centered h2 style */
-    border-bottom: none;
-}
-.suggestion-category ul {
-    list-style-type: none;
-    padding-left: 0;
-}
-.suggestion-category li {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: #e9f5ff;
-    border-left: 4px solid #007bff;
-    padding: 12px 15px;
-    margin-bottom: 10px;
-    border-radius: 4px;
-    gap: 15px;
-}
-.phrase-content {
-    flex-grow: 1;
-}
-.phrase-en .word {
-    cursor: pointer;
-    text-decoration: underline dotted #007bff;
-    transition: color 0.2s, background-color 0.2s;
-}
-.phrase-en .word:hover {
-    color: #fff;
-    background-color: #007bff;
-}
-.phrase-es {
-    font-style: italic;
-    color: #555;
-    font-size: 0.9em;
-    margin-top: 4px;
-}
-.speak-btn {
-    background: none;
-    border: none;
-    font-size: 1.5em;
-    cursor: pointer;
-    color: #007bff;
-    transition: transform 0.2s;
-    padding: 5px;
-}
-.speak-btn:hover {
-    transform: scale(1.2);
-}
-.important-tip {
-    background-color: #fffbe6;
-    border: 1px solid #ffe58f;
-    padding: 15px;
-    border-radius: 5px;
-    margin-top: 15px;
-}
-.important-tip strong {
-    color: #d97706;
-}
-#tts-support-warning {
-    background-color: #f8d7da;
-    color: #721c24;
-    padding: 10px;
-    border-radius: 5px;
-    text-align: center;
-}
+.suggestion-category { margin-bottom: 25px; }
+.suggestion-category h3 { color: #343a40; margin-bottom: 15px; font-size: 1.1em; text-align: left; border-bottom: none; }
+.suggestion-category ul { list-style-type: none; padding-left: 0; }
+.suggestion-category li { display: flex; align-items: center; justify-content: space-between; background-color: #e9f5ff; border-left: 4px solid #007bff; padding: 12px 15px; margin-bottom: 10px; border-radius: 4px; gap: 15px; }
+.phrase-content { flex-grow: 1; }
+.phrase-en .word { cursor: pointer; text-decoration: underline dotted #007bff; transition: color 0.2s, background-color 0.2s; }
+.phrase-en .word:hover { color: #fff; background-color: #007bff; }
+.phrase-es { font-style: italic; color: #555; font-size: 0.9em; margin-top: 4px; }
+.speak-btn { background: none; border: none; font-size: 1.5em; cursor: pointer; color: #007bff; transition: transform 0.2s; padding: 5px; }
+.speak-btn:hover { transform: scale(1.2); }
+.important-tip { background-color: #fffbe6; border: 1px solid #ffe58f; padding: 15px; border-radius: 5px; margin-top: 15px; }
+.important-tip strong { color: #d97706; }
+#tts-support-warning { background-color: #f8d7da; color: #721c24; padding: 10px; border-radius: 5px; }

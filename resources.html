@@ -3,77 +3,136 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Herramientas de Preparación de Inglés</title>
+    <title>Recursos de Preparación CELPIP</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- ====================================================== -->
-    <!--          BARRA DE NAVEGACIÓN (NUEVO)                 -->
-    <!-- ====================================================== -->
+
     <div class="navigation-bar">
         <a href="index.html" class="nav-link">← Volver a Inicio</a>
     </div>
-
+    
     <div class="container">
-        <h1>Herramientas de Preparación para Inglés</h1>
-        
+        <h1>Índice de Recursos CELPIP</h1>
+        <p>Haz clic en una tarea para ir directamente a los recursos de preparación. Las tareas enlazadas están activas.</p>
+
         <!-- ====================================================== -->
-        <!-- SECCIÓN 1: ASISTENTE DE ESCRITURA PARA CELPIP (NUEVO) -->
+        <!--        NUEVA TABLA DE NAVEGACIÓN                     -->
         <!-- ====================================================== -->
-        <div class="task-block">
-            <h2>CELPIP Task 1 – Writing an Email Assistant</h2>
-            <p>Selecciona el tipo de email que quieres practicar para ver sugerencias de frases, traducciones y escuchar la pronunciación correcta.</p>
-            
-            <div>
-                <label for="email-type"><strong>Elige el propósito del email:</strong></label>
-                <select id="email-type">
-                    <option value="">-- Selecciona una opción --</option>
-                    <option value="complaint">Hacer una queja (Complaint)</option>
-                    <option value="concern">Explicar una preocupación (Concern)</option>
-                    <option value="request">Solicitar información (Request)</option>
-                    <option value="suggestion">Hacer una sugerencia (Suggestion)</option>
-                    <option value="advice">Dar un consejo (Advice)</option>
-                    <option value="explanation">Dar una explicación (Explanation)</option>
-                    <option value="apology">Ofrecer una disculpa (Apology)</option>
-                    <option value="congratulations">Felicitar a alguien (Congratulations)</option>
-                    <option value="invitation">Hacer una invitación (Invitation)</option>
-                </select>
+        <table class="celpip-structure-table">
+            <thead>
+                <tr>
+                    <th>Test Component</th>
+                    <th>Component Sections</th>
+                    <th>Timing</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Listening Section -->
+                <tr>
+                    <td rowspan="7"><strong>Listening</strong></td>
+                    <td>Practice Task</td>
+                    <td rowspan="7">47-55 minutes</td>
+                </tr>
+                <tr><td>Part 1: Listening to Problem Solving</td></tr>
+                <tr><td>Part 2: Listening to a Daily Life Conversation</td></tr>
+                <tr><td>Part 3: Listening for Information</td></tr>
+                <tr><td>Part 4: Listening to a News Item</td></tr>
+                <tr><td>Part 5: Listening to a Discussion</td></tr>
+                <tr><td>Part 6: Listening to Viewpoints</td></tr>
+                <!-- Reading Section -->
+                <tr>
+                    <td rowspan="5"><strong>Reading</strong></td>
+                    <td>Practice Task</td>
+                    <td rowspan="5">55-60 minutes</td>
+                </tr>
+                <tr><td>Part 1: Reading Correspondence</td></tr>
+                <tr><td>Part 2: Reading to Apply a Diagram</td></tr>
+                <tr><td>Part 3: Reading for Information</td></tr>
+                <tr><td>Part 4: Reading for Viewpoints</td></tr>
+                <!-- Writing Section -->
+                <tr>
+                    <td rowspan="2"><strong>Writing</strong></td>
+                    <td><a href="#writing-task-1">Task 1: Writing an Email</a></td>
+                    <td rowspan="2">53-60 minutes</td>
+                </tr>
+                <tr>
+                    <td><a href="#writing-task-2">Task 2: Responding to Survey Questions</a></td>
+                </tr>
+                <!-- Speaking Section -->
+                <tr>
+                    <td rowspan="9"><strong>Speaking</strong></td>
+                    <td>Practice Task</td>
+                    <td rowspan="9">15-20 minutes</td>
+                </tr>
+                <tr><td>Task 1: Giving Advice</td></tr>
+                <tr><td>Task 2: Talking about a Personal Experience</td></tr>
+                <tr><td>Task 3: Describing a Scene</td></tr>
+                <tr><td>Task 4: Making Predictions</td></tr>
+                <tr><td>Task 5: Comparing and Persuading</td></tr>
+                <tr><td>Task 6: Dealing with a Difficult Situation</td></tr>
+                <tr><td>Task 7: Expressing Opinions</td></tr>
+                <tr><td>Task 8: Describing an Unusual Situation</td></tr>
+            </tbody>
+        </table>
+
+        <hr class="section-divider">
+
+        <!-- ====================================================== -->
+        <!--     SECCIÓN DE RECURSO: WRITING TASK 1               -->
+        <!--     (ID de anclaje: writing-task-1)                  -->
+        <!-- ====================================================== -->
+        <div id="writing-task-1" class="resource-section">
+            <div class="task-block">
+                <h2>Writing Task 1 – Email Assistant</h2>
+                <p>Elige el propósito del email para ver frases clave, traducciones y escuchar la pronunciación.</p>
+                <div>
+                    <label for="email-type"><strong>Propósito del Email:</strong></label>
+                    <select id="email-type">
+                        <option value="">-- Selecciona una opción --</option>
+                        <option value="complaint">Hacer una queja (Complaint)</option>
+                        <option value="concern">Explicar una preocupación (Concern)</option>
+                        <option value="request">Solicitar información (Request)</option>
+                        <option value="suggestion">Hacer una sugerencia (Suggestion)</option>
+                        <option value="advice">Dar un consejo (Advice)</option>
+                        <option value="explanation">Dar una explicación (Explanation)</option>
+                        <option value="apology">Ofrecer una disculpa (Apology)</option>
+                        <option value="congratulations">Felicitar (Congratulations)</option>
+                        <option value="invitation">Hacer una invitación (Invitation)</option>
+                    </select>
+                </div>
+                <div id="email-suggestions-container" style="display: none;"></div>
             </div>
-            
-            <div id="suggestions-container" style="display: none;">
-                <!-- El contenido interactivo se generará aquí con JavaScript -->
-            </div>
-             <div id="tts-support-warning" style="display: none; margin-top: 15px;">
-                Tu navegador no soporta la síntesis de voz. Las funciones de audio no estarán disponibles.
-            </div>
         </div>
 
-        <hr style="margin: 40px 0;">
+        <hr class="section-divider">
 
         <!-- ====================================================== -->
-        <!-- SECCIÓN 2: QUIZ DE GRAMÁTICA (EXISTENTE)              -->
+        <!--     NUEVA SECCIÓN: WRITING TASK 2                      -->
+        <!--     (ID de anclaje: writing-task-2)                  -->
         <!-- ====================================================== -->
-        <h2>English Grammar Quiz</h2>
-        <div id="quiz-area">
-            <!-- Questions will be dynamically loaded here by script.js -->
+        <div id="writing-task-2" class="resource-section">
+            <div class="task-block">
+                <h2>Writing Task 2 – Survey Response Assistant</h2>
+                <p>Esta tarea te da dos opciones. Debes elegir una y justificarla. Usa estas frases para estructurar tu respuesta de manera persuasiva.</p>
+                <div>
+                    <label for="survey-part"><strong>Parte de la Respuesta:</strong></label>
+                    <select id="survey-part">
+                        <option value="">-- Selecciona una opción --</option>
+                        <option value="choice">1. Expresar tu elección (State your choice)</option>
+                        <option value="reasoning">2. Dar razones (Provide reasons)</option>
+                        <option value="examples">3. Dar ejemplos (Provide examples)</option>
+                        <option value="conclusion">4. Concluir (Concluding)</option>
+                    </select>
+                </div>
+                <div id="survey-suggestions-container" style="display: none;"></div>
+            </div>
         </div>
 
-        <button id="submit-btn">Submit Answers</button>
-
-        <div id="results-area" style="display:none;">
-            <h3>Your Results</h3>
-            <p>Score: <span id="score">0</span> / <span id="total-questions">100</span></p>
-            <p id="feedback"></p>
+        <div id="tts-support-warning" style="display: none; margin-top: 15px; text-align: center;">
+            Tu navegador no soporta la síntesis de voz. Las funciones de audio no estarán disponibles.
         </div>
 
-        <div id="progress-area">
-            <h3>Your Progress History</h3>
-            <ul id="progress-list">
-                <!-- Progress will be loaded here by script.js -->
-            </ul>
-            <button id="clear-progress-btn">Clear Progress History</button>
-        </div>
-        
     </div>
 
     <script src="script.js"></script>
