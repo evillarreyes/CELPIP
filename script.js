@@ -45,6 +45,47 @@ document.addEventListener('DOMContentLoaded', () => {
             despedida: [{en: "I look forward to your prompt response.", es: "Espero su pronta respuesta."}, {en: "Thank you for your attention to this matter.", es: "Gracias por su atención a este asunto."}],
             extra: {title: "Tono y Registro (Clave)", content: "<strong>Formal, directo pero educado.</strong> Evita el sarcasmo. Describe el problema claramente y propón una solución razonable."}
         },
+
+concern: {
+        saludos: [
+            {en: "Dear [Manager's Name / Relevant Person],", es: "Estimado/a [Nombre del Gerente / Persona Relevante],"},
+            {en: "Dear Neighbours,", es: "Estimados vecinos,"}
+        ],
+        apertura: [
+            {en: "I am writing to express my concern about...", es: "Escribo para expresar mi preocupación sobre..."},
+            {en: "I would like to bring an important matter to your attention.", es: "Quisiera llamar su atención sobre un asunto importante."},
+            {en: "I am writing regarding the issue of [e.g., noise levels in the building].", es: "Escribo en relación al problema de [ej. los niveles de ruido en el edificio]."}
+        ],
+        frasesUtiles: [
+            {en: "I have noticed that recently...", es: "He notado que recientemente..."},
+            {en: "This is concerning because it affects [e.g., the safety of residents].", es: "Esto es preocupante porque afecta [ej. la seguridad de los residentes]."},
+            {en: "I am worried that this could lead to [e.g., an accident].", es: "Me preocupa que esto pueda llevar a [ej. un accidente]."},
+            {en: "I believe it is important that we address this issue promptly.", es: "Creo que es importante que abordemos este problema con prontitud."},
+            {en: "Perhaps we could discuss a possible solution.", es: "Quizás podríamos discutir una posible solución."}
+        ],
+        despedida: [
+            {en: "Thank you for taking my concerns into consideration.", es: "Gracias por tomar mis preocupaciones en consideración."},
+            {en: "I hope we can resolve this matter together.", es: "Espero que podamos resolver este asunto juntos."},
+            {en: "I look forward to hearing your thoughts on this.", es: "Espero escuchar sus pensamientos sobre esto."}
+        ],
+        extra: {
+            title: "Tono y Registro (Clave)", 
+            content: "<strong>Serio, respetuoso y constructivo.</strong> Tu objetivo es alertar sobre un problema y buscar una solución colaborativa, no culpar. Describe el problema y su impacto de manera objetiva."
+        }
+    },
+
+
+
+
+
+
+
+
+
+
+
+
+
         request: {
             saludos: [{en: "Dear [Contact Person],", es: "Estimado/a [Persona de contacto],"}, {en: "Hello,", es: "Hola,"}],
             apertura: [{en: "I am writing to request more information about...", es: "Escribo para solicitar más información sobre..."}, {en: "I would be grateful if you could provide me with...", es: "Le agradecería si pudiera proporcionarme..."}],
