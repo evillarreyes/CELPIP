@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Herramientas de Preparación de Inglés</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- ====================================================== -->
+    <!--          BARRA DE NAVEGACIÓN (NUEVO)                 -->
+    <!-- ====================================================== -->
+    <div class="navigation-bar">
+        <a href="index.html" class="nav-link">← Volver a Inicio</a>
+    </div>
+
+    <div class="container">
+        <h1>Herramientas de Preparación para Inglés</h1>
+        
+        <!-- ====================================================== -->
+        <!-- SECCIÓN 1: ASISTENTE DE ESCRITURA PARA CELPIP (NUEVO) -->
+        <!-- ====================================================== -->
+        <div class="task-block">
+            <h2>CELPIP Task 1 – Writing an Email Assistant</h2>
+            <p>Selecciona el tipo de email que quieres practicar para ver sugerencias de frases, traducciones y escuchar la pronunciación correcta.</p>
+            
+            <div>
+                <label for="email-type"><strong>Elige el propósito del email:</strong></label>
+                <select id="email-type">
+                    <option value="">-- Selecciona una opción --</option>
+                    <option value="complaint">Hacer una queja (Complaint)</option>
+                    <option value="request">Solicitar información (Request)</option>
+                    <option value="suggestion">Hacer una sugerencia (Suggestion)</option>
+                    <option value="advice">Dar un consejo (Advice)</option>
+                    <option value="explanation">Dar una explicación (Explanation)</option>
+                    <option value="apology">Ofrecer una disculpa (Apology)</option>
+                    <option value="congratulations">Felicitar a alguien (Congratulations)</option>
+                    <option value="invitation">Hacer una invitación (Invitation)</option>
+                </select>
+            </div>
+            
+            <div id="suggestions-container" style="display: none;">
+                <!-- El contenido interactivo se generará aquí con JavaScript -->
+            </div>
+             <div id="tts-support-warning" style="display: none; margin-top: 15px;">
+                Tu navegador no soporta la síntesis de voz. Las funciones de audio no estarán disponibles.
+            </div>
+        </div>
+
+        <hr style="margin: 40px 0;">
+
+        <!-- ====================================================== -->
+        <!-- SECCIÓN 2: QUIZ DE GRAMÁTICA (EXISTENTE)              -->
+        <!-- ====================================================== -->
+        <h2>English Grammar Quiz</h2>
+        <div id="quiz-area">
+            <!-- Questions will be dynamically loaded here by script.js -->
+        </div>
+
+        <button id="submit-btn">Submit Answers</button>
+
+        <div id="results-area" style="display:none;">
+            <h3>Your Results</h3>
+            <p>Score: <span id="score">0</span> / <span id="total-questions">100</span></p>
+            <p id="feedback"></p>
+        </div>
+
+        <div id="progress-area">
+            <h3>Your Progress History</h3>
+            <ul id="progress-list">
+                <!-- Progress will be loaded here by script.js -->
+            </ul>
+            <button id="clear-progress-btn">Clear Progress History</button>
+        </div>
+        
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
